@@ -8,21 +8,7 @@ class Bootcamp
     @grades = Hash.new { |hash, k| hash[k] = [] }
   end
 
-  def name
-    @name
-  end
-
-  def slogan
-    @slogan
-  end
-
-  def teachers
-    @teachers
-  end
-
-  def students
-    @students
-  end
+  attr_writer :name, :slogan, :teachers, :students
   
   def hire(teacher)
     @teachers << teacher
